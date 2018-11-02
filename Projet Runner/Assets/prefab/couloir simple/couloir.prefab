@@ -107,6 +107,8 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 4157387379345870}
+  - component: {fileID: 65817895188026384}
+  - component: {fileID: 65200452991364702}
   m_Layer: 0
   m_Name: couloir
   m_TagString: Untagged
@@ -306,7 +308,7 @@ Transform:
   m_PrefabInternal: {fileID: 100100000}
   m_GameObject: {fileID: 1569839674252194}
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: 0.65345466, y: 4.040593, z: 20.25}
+  m_LocalPosition: {x: 0, y: 0, z: 0}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children:
   - {fileID: 4617203437777006}
@@ -751,6 +753,18 @@ MeshFilter:
   m_PrefabInternal: {fileID: 100100000}
   m_GameObject: {fileID: 1718277132028498}
   m_Mesh: {fileID: 10202, guid: 0000000000000000e000000000000000, type: 0}
+--- !u!65 &65200452991364702
+BoxCollider:
+  m_ObjectHideFlags: 1
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 100100000}
+  m_GameObject: {fileID: 1569839674252194}
+  m_Material: {fileID: 0}
+  m_IsTrigger: 1
+  m_Enabled: 1
+  serializedVersion: 2
+  m_Size: {x: 3.4801297, y: 4.181547, z: 1}
+  m_Center: {x: -0.9090245, y: -1.4265034, z: -10.2}
 --- !u!65 &65234874412564952
 BoxCollider:
   m_ObjectHideFlags: 1
@@ -835,6 +849,18 @@ BoxCollider:
   serializedVersion: 2
   m_Size: {x: 1, y: 1, z: 1}
   m_Center: {x: 0, y: 0, z: 0}
+--- !u!65 &65817895188026384
+BoxCollider:
+  m_ObjectHideFlags: 1
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 100100000}
+  m_GameObject: {fileID: 1569839674252194}
+  m_Material: {fileID: 0}
+  m_IsTrigger: 1
+  m_Enabled: 1
+  serializedVersion: 2
+  m_Size: {x: 5.5502734, y: 7.1726933, z: 25}
+  m_Center: {x: -0.9012191, y: -0.5530734, z: 1.75}
 --- !u!65 &65916823703376222
 BoxCollider:
   m_ObjectHideFlags: 1

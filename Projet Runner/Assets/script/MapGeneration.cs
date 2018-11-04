@@ -13,12 +13,17 @@ public class MapGeneration : MonoBehaviour {
     public int _maxCouiloirConsecutif;
     public int _pieceSpawnChanceOn100; //valeur de spawn sur 100
 
-    private int _nbSpawn;
     private BoxCollider _PieceCollider;
     private BoxCollider _CouloirCollider;
     private Transform _positionToSpawn;
     private int _CouloirConsecutif;
     private bool _LastSpawnIsCouloir = false;
+    private int numberOfItemSpawn;
+
+    private static int _nbSpawn;
+    private static Dictionary<string, GameObject> CreatedBlocMap;
+    private static string CurrentMap;
+    private static string previousMap;
 
 
     void Start()
@@ -30,6 +35,8 @@ public class MapGeneration : MonoBehaviour {
         _CouloirCollider.size = new Vector3(0, 0, _CouloirCollider.size.z);
 
         _positionToSpawn = transform;
+
+        CreatedBlocMap = new Dictionary<string, GameObject>();
     }
 
     // Update is called once per frame
@@ -50,6 +57,20 @@ public class MapGeneration : MonoBehaviour {
             }
         }
 	}
+
+    public static void RemoveMapAfterPassOf(string mapInstance)
+    {
+        if (previousMap != null && CreatedBlocMap.ContainsKey(previousMap))
+        {
+            Destroy(CreatedBlocMap[previousMap]);
+            _nbSpawn--;
+        }
+        if(CurrentMap != null)
+        {
+            previousMap = CurrentMap;
+        }
+        CurrentMap = mapInstance;
+    }
     
     private void SpawnPiece()
     {
@@ -68,6 +89,10 @@ public class MapGeneration : MonoBehaviour {
         _nbSpawn++;
         int index = Random.Range(0, gameObjects.Count);
         GameObject piece = (GameObject)Instantiate(gameObjects[index], _positionToSpawn.position, Quaternion.identity);
+        piece.name = numberOfItemSpawn.ToString();
+        CreatedBlocMap.Add(numberOfItemSpawn.ToString(), piece);
+
+        numberOfItemSpawn++;
         _positionToSpawn.position += GameobjectSize;
     }
 

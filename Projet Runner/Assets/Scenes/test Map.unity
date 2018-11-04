@@ -143,7 +143,7 @@ MonoBehaviour:
   _piece: {fileID: 1319028958157508, guid: e72da15629c5f1540a51a9f655363c64, type: 2}
   _couloir: {fileID: 1569839674252194, guid: bde7836154e222f4aa62e8a34d67eb4c, type: 2}
   _transform: {fileID: 438223169}
-  _limitSpawn: 10
+  _limitSpawn: 3
   _pieces:
   - {fileID: 1091452161726014, guid: 818969112d67cc648a92796deb063747, type: 2}
   _couloirs:
@@ -235,7 +235,7 @@ Transform:
   m_PrefabInternal: {fileID: 0}
   m_GameObject: {fileID: 249163248}
   m_LocalRotation: {x: 0, y: -0.747914, z: 0, w: 0.6637957}
-  m_LocalPosition: {x: 15.67, y: 10.55, z: 34.5}
+  m_LocalPosition: {x: 16.01, y: 10.55, z: -17.02}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children:
   - {fileID: 1176748757}
@@ -347,9 +347,10 @@ GameObject:
   - component: {fileID: 1176748760}
   - component: {fileID: 1176748759}
   - component: {fileID: 1176748758}
+  - component: {fileID: 1176748761}
   m_Layer: 0
   m_Name: Cube
-  m_TagString: Untagged
+  m_TagString: Player
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -361,7 +362,7 @@ Transform:
   m_PrefabInternal: {fileID: 0}
   m_GameObject: {fileID: 1176748756}
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: -4.3, y: -0.806, z: 7.4}
+  m_LocalPosition: {x: -5.22, y: -0.806, z: 9.58}
   m_LocalScale: {x: 0.12491, y: 0.12491, z: 0.12491}
   m_Children: []
   m_Father: {fileID: 249163251}
@@ -421,3 +422,18 @@ MeshFilter:
   m_PrefabInternal: {fileID: 0}
   m_GameObject: {fileID: 1176748756}
   m_Mesh: {fileID: 10202, guid: 0000000000000000e000000000000000, type: 0}
+--- !u!54 &1176748761
+Rigidbody:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  m_GameObject: {fileID: 1176748756}
+  serializedVersion: 2
+  m_Mass: 1
+  m_Drag: 0
+  m_AngularDrag: 0.05
+  m_UseGravity: 0
+  m_IsKinematic: 0
+  m_Interpolate: 0
+  m_Constraints: 118
+  m_CollisionDetection: 0

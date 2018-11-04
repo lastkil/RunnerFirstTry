@@ -109,6 +109,7 @@ GameObject:
   - component: {fileID: 4157387379345870}
   - component: {fileID: 65817895188026384}
   - component: {fileID: 65200452991364702}
+  - component: {fileID: 114120212474717100}
   m_Layer: 0
   m_Name: couloir
   m_TagString: Untagged
@@ -1021,3 +1022,14 @@ Light:
   m_UseColorTemperature: 0
   m_ShadowRadius: 0
   m_ShadowAngle: 0
+--- !u!114 &114120212474717100
+MonoBehaviour:
+  m_ObjectHideFlags: 1
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 100100000}
+  m_GameObject: {fileID: 1569839674252194}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 3d11bc743fded2b4a9c50596260ec726, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
